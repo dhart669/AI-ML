@@ -1,7 +1,6 @@
 
 ### `linear_regression/gradient_descent.py`
 
-```python
 import numpy as np
 import matplotlib.pyplot as plt
 

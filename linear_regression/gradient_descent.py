@@ -3,10 +3,15 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 
-# Data: Size of house (sq ft) and corresponding price ($)
-X = np.array([1500, 1600, 1700, 1800, 1900])
-y = np.array([300000, 320000, 340000, 360000, 380000])
+# Load data from CSV file
+file_path = '../data/linear_regression_data.csv'
+data = pd.read_csv(file_path)
+
+# Extract Size (sq ft) and Price ($) columns
+X = data['Size (sq ft)'].values
+y = data['Price ($)'].values
 
 # Normalize the data
 X = (X - np.mean(X)) / np.std(X)
